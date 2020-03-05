@@ -6,8 +6,8 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "55a470d215ae15bc")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5ed441051c75b1ec")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
 
 
 // FILE: models.generated.cs
@@ -62,6 +62,27 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Color Name: Please enter your favorite color
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
+		[ImplementPropertyType("colorName")]
+		public string ColorName => global::Umbraco.Web.PublishedModels.BasicContentControls.GetColorName(this);
+
+		///<summary>
+		/// Main Content: Enter content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
+		[ImplementPropertyType("mainContent")]
+		public global::System.Web.IHtmlString MainContent => global::Umbraco.Web.PublishedModels.BasicContentControls.GetMainContent(this);
+
+		///<summary>
+		/// Show Image: true/fase
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
+		[ImplementPropertyType("showImage")]
+		public bool ShowImage => global::Umbraco.Web.PublishedModels.BasicContentControls.GetShowImage(this);
+
+		///<summary>
 		/// Title: Enter a title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
@@ -73,6 +94,18 @@ namespace Umbraco.Web.PublishedModels
 	/// <summary>Basic Content Controls</summary>
 	public partial interface IBasicContentControls : IPublishedContent
 	{
+		/// <summary>Color Name</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
+		string ColorName { get; }
+
+		/// <summary>Main Content</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
+		global::System.Web.IHtmlString MainContent { get; }
+
+		/// <summary>Show Image</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
+		bool ShowImage { get; }
+
 		/// <summary>Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
 		string Title { get; }
@@ -102,6 +135,39 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Color Name: Please enter your favorite color
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
+		[ImplementPropertyType("colorName")]
+		public string ColorName => GetColorName(this);
+
+		/// <summary>Static getter for Color Name</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
+		public static string GetColorName(IBasicContentControls that) => that.Value<string>("colorName");
+
+		///<summary>
+		/// Main Content: Enter content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
+		[ImplementPropertyType("mainContent")]
+		public global::System.Web.IHtmlString MainContent => GetMainContent(this);
+
+		/// <summary>Static getter for Main Content</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
+		public static global::System.Web.IHtmlString GetMainContent(IBasicContentControls that) => that.Value<global::System.Web.IHtmlString>("mainContent");
+
+		///<summary>
+		/// Show Image: true/fase
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
+		[ImplementPropertyType("showImage")]
+		public bool ShowImage => GetShowImage(this);
+
+		/// <summary>Static getter for Show Image</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.4")]
+		public static bool GetShowImage(IBasicContentControls that) => that.Value<bool>("showImage");
 
 		///<summary>
 		/// Title: Enter a title
